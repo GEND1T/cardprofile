@@ -1,0 +1,99 @@
+/* 1. CSS Reset dan Box Model Terbaik (Wajib) */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f2f5; /* Latar belakang halaman agar kartu terlihat */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* 2. Selector ID untuk container kartu */
+#profile-card {
+    width: 300px;
+    background-color: #ffffff;
+    /* Margin 50px atas-bawah, dan 'auto' kiri-kanan untuk posisi tengah */
+    margin: 50px auto; 
+    
+    /* 3. Box Model Pada Kartu */
+    padding: 25px; /* Jarak di dalam kartu */
+    border: 1px solid #ddd; /* Border tipis */
+    border-radius: 15px; /* Sudut membulat */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* 5. Element Selector (img) */
+#profile-card img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%; /* Membuat gambar menjadi bundar */
+    margin-bottom: 20px; /* Jarak dari gambar ke nama */
+    object-fit: cover;
+    border: 3px solid #f0f2f5;
+}
+
+/* Element Selector (h1) */
+#profile-card h1 {
+    margin-bottom: 8px;
+    font-size: 1.5em;
+    color: #333;
+}
+
+/* 4. Selector Class (.role) */
+.role {
+    color: #6c757d; /* Mengubah warna teks sesuai instruksi */
+    margin-bottom: 25px;
+    font-size: 0.9em;
+}
+
+/* 4. Selector Class untuk tombol */
+.btn-primary, .btn-secondary {
+    display: block; /* Agar setiap tombol mengisi lebar penuh dan rapi ke bawah */
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 8px;
+    
+    /* Padding vertikal 12px, horizontal bebas */
+    padding: 12px 15px; 
+    
+    /* Margin bawah 10px untuk jarak antar tombol */
+    margin-bottom: 10px; 
+    
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-primary {
+    background-color: #e9ecef;
+    color: #333;
+}
+
+.btn-secondary {
+    background-color: #e9ecef;
+    color: #333;
+}
+
+/* Efek hover untuk interaktivitas */
+.btn-primary:hover {
+    background-color: #0056b3;
+    color: white;
+    transform: translateY(-2px);
+}
+
+.btn-secondary:hover {
+    background-color: #0056b3;
+    color: white;
+    transform: translateY(-2px);
+
+}
+
+/* Menghilangkan margin bawah pada tombol terakhir */
+.buttons a:last-child {
+    margin-bottom: 0;
+}
